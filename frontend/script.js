@@ -1,5 +1,6 @@
-// Fetch data from the backend
-const backendUrl = process.env.BACKEND_URL || 'http://backend:5000'; // Fallback for local testing
+// Replace process.env.BACKEND_URL with a direct URL
+const backendUrl = 'http://localhost:5000'; // Change this to 'http://backend:5000' in Docker
+
 fetch(`${backendUrl}/api/message`)
   .then(response => response.json())
   .then(data => {
